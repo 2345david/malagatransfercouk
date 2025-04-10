@@ -1,13 +1,12 @@
 <template>
   <div>
     
+ 
   </div>
 </template>
 
-<script lang="ts" setup>
-
+<script setup lang="ts">
+definePageMeta({
+  layout: 'gallery' // Asegúrate de que esté correctamente configurado para usar el layout 'gallery'
+})
 </script>
-
-<style>
-
-</style>

@@ -112,6 +112,8 @@ const enviarFormulario = async () => {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   color: white;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Título */
@@ -135,7 +137,8 @@ label {
 }
 
 /* Inputs y Textarea */
-input, textarea {
+input,
+textarea {
   padding: 12px;
   border: 1px solid #444;
   background: #222;
@@ -143,9 +146,12 @@ input, textarea {
   border-radius: 6px;
   font-size: 14px;
   transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   border-color: #f8d210;
   outline: none;
   box-shadow: 0 0 8px rgba(248, 210, 16, 0.6);
@@ -180,5 +186,30 @@ input:focus, textarea:focus {
   background: gray;
   cursor: not-allowed;
 }
-</style>
 
+/* Responsive para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 20px;
+  }
+
+  .input-group {
+    margin-bottom: 12px;
+  }
+
+  .submit-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    padding: 15px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+  }
+}
+</style>

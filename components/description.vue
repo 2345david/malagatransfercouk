@@ -1,35 +1,35 @@
 <template>
-    <!-- Sección nueva: Transporte desde/hasta el Aeropuerto -->
-    <section class="bg-gray-100 py-16 px-6">
-      <div class="container mx-auto flex flex-col md:flex-row items-center text-center md:text-left gap-8">
-        
-        <!-- Texto -->
-        <div class="md:w-1/2">
-          <h2 class="text-3xl font-bold text-gray-900 mb-4">
-            Transporte desde/hasta el Aeropuerto de Málaga
-          </h2>
-          <p class="text-gray-700 mb-4">
-            Bienvenidos a <strong>Prestigue Málaga Transfer</strong>. Somos una empresa de transporte especializada en 
-            <strong>Transfer</strong> y transporte de personas. Tenemos amplia experiencia en el sector turístico, lo que 
-            nos permite mejorar nuestro servicio día a día para satisfacer a nuestros clientes.
-          </p>
-          <NuxtLink to="/sobreNosotros">
-            <button class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition">
-              Más sobre nosotros
-            </button>
-          </NuxtLink>
-        </div>
-  
-        <!-- Imágenes -->
-        <div class="md:w-1/2 flex gap-4">
-          <img class="w-72 h-48 rounded-lg shadow-lg" src="/public/fotoCoche.jpg" alt="Coche de lujo" />
-          <img class="w-72 h-48 rounded-lg shadow-lg" src="/public/mercedesFoto.jpg" alt="Mercedes Benz" />
-        </div>
-  
+  <!-- Sección nueva: Transporte desde/hasta el Aeropuerto -->
+  <section class="bg-gray-100 py-16 px-6">
+    <div class="container mx-auto flex flex-col md:flex-row items-center text-center md:text-left gap-8">
+      
+      <!-- Texto -->
+      <div class="md:w-1/2">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+          Transporte desde/hasta el Aeropuerto de Málaga
+        </h2>
+        <p class="text-gray-700 mb-4">
+          Bienvenidos a <strong>Prestigue Málaga Transfer</strong>. Somos una empresa de transporte especializada en 
+          <strong>Transfer</strong> y transporte de personas. Tenemos amplia experiencia en el sector turístico, lo que 
+          nos permite mejorar nuestro servicio día a día para satisfacer a nuestros clientes.
+        </p>
+        <NuxtLink to="/sobreNosotros">
+          <button class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition">
+            Más sobre nosotros
+          </button>
+        </NuxtLink>
       </div>
-    </section>
-  
-    <!-- Sección adicional: Precio Todo Incluido y Servicios -->
+
+      <!-- Imágenes -->
+      <div class="md:w-1/2 flex flex-wrap gap-4 justify-center md:justify-start">
+        <img class="w-full md:w-72 h-48 rounded-lg shadow-lg object-cover mb-4 md:mb-0" src="/public/fotoCoche.jpg" alt="Coche de lujo" />
+        <img class="w-full md:w-72 h-48 rounded-lg shadow-lg object-cover" src="/public/mercedesFoto.jpg" alt="Mercedes Benz" />
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sección adicional: Precio Todo Incluido y Servicios -->
   <section class="py-16 px-6 bg-gray-200">
     <div class="container mx-auto text-center mb-12">
       <div class="infoPrecio mb-8">
@@ -42,7 +42,7 @@
       </div>
 
       <!-- Servicios -->
-      <div class="cajas grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="cajas grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="subcaja bg-white p-6 rounded-lg shadow-lg hover:transform hover:translate-y-4 hover:shadow-2xl transition-all duration-300 ease-in-out">
           <img class="w-full h-48 object-cover rounded-md mb-4" src="/public/coche1.jpg" />
           <h3 class="text-xl font-bold mb-2">Transfer desde/hasta el Aeropuerto de Málaga</h3>
@@ -76,8 +76,8 @@
       </div>
     </div>
   </section>
-  
-   <!-- Sección: ¿Por qué elegirnos? -->
+
+  <!-- Sección: ¿Por qué elegirnos? -->
   <section class="bg-gray-400 py-16 px-6">
     <div class="container mx-auto text-center">
       <h2 class="text-4xl font-semibold mb-4">¿Por qué elegirnos?</h2>
@@ -119,8 +119,8 @@
     </div>
   </section>
 
-   <!-- Sección de dudas -->
-   <section class="py-16 px-6 bg-gray-100">
+  <!-- Sección de dudas -->
+  <section class="py-16 px-6 bg-gray-100">
     <div class="container mx-auto text-center mb-12">
       <div class="textInformation mb-8">
         <h1 class="text-3xl font-bold text-gray-900">¿Tienes dudas?</h1>
@@ -140,22 +140,21 @@
       </div>
     </div>
   </section>
+</template>
 
-  </template>
-  
-  <script>
-  export default {
-    name: 'Description'
-  }
-  </script>
-  
-  <style scoped>
-  /* Estilos específicos para esta sección */
-  .subcaja img {
-    height: 200px; /* Ajusta el tamaño de las imágenes */
-    object-fit: cover;
-  }
-  .subcaja {
+<script>
+export default {
+  name: 'Description'
+}
+</script>
+
+<style scoped>
+/* Estilos específicos para esta sección */
+.subcaja img {
+  height: 200px; /* Ajusta el tamaño de las imágenes */
+  object-fit: cover;
+}
+.subcaja {
   transition: all 0.3s ease-in-out; /* Asegura la animación suave */
 }
 
@@ -171,6 +170,4 @@
 .email-button button:hover {
   background-color: #2563eb; /* Cambia el color de fondo cuando el botón es hover */
 }
-  </style>
-  
-  
+</style>
