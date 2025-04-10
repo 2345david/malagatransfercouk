@@ -3,7 +3,7 @@
       <!-- Contenedor del video de fondo -->
       <div class="absolute inset-0 -z-10 w-full h-full overflow-hidden">
         <video v-if="videoCargado" autoplay loop muted playsinline class="w-full h-full object-cover">
-          <source src="/public/coches.mp4" type="video/mp4" />
+          <source src="/public/coche2.jpg" type="img" />
         </video>
         <div v-else class="w-full h-full bg-gray-800"></div>
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
