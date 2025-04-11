@@ -3,9 +3,7 @@ type = "pages"
 
 pages_build_output_dir = ".output/public"
 
-[build]
-command = "npm run build"  # o el comando que uses para generar tu aplicación en Nuxt
-directory = ".output/public"  # La carpeta de salida generada por Nuxt
+
 
 [env.production]
 name = "nombre-de-tu-aplicacion"
