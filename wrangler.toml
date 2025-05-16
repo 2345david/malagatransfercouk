@@ -1,9 +1,2 @@
 name = "malagatransfercouk"
-type = "pages"
-
-pages_build_output_dir = ".output/public"
-
-
-
-[env.production]
-name = "nombre-de-tu-aplicacion"
+pages_build_output_dir = "dist"

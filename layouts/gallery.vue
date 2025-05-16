@@ -1,74 +1,54 @@
 <template>
   <Navbar />
 
-  <div class="flex flex-col items-center pt-[100px] justify-center p-5 bg-gray-200">
-    <h1 class="flex justify-center pt-[150px] pb-8 text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 drop-shadow-lg animate-fade-in p-4 text-center">
-      Carrusel de Imágenes
-    </h1>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-40">
+    <h2 class="text-3xl font-bold text-center mb-6 sm:mb-10">Galería de Vehículos</h2>
+    <p class="text-center text-gray-600 mb-12 text-base sm:text-lg">
+      Esta es una pequeña muestra de nuestra gama de vehículos. Conforme vayamos teniendo más coches, los iremos añadiendo a la web.
+    </p>
 
-    <div class="relative w-full max-w-full md:max-w-4xl h-[350px] sm:h-[500px] md:h-[500px] lg:h-[700px] xl:h-[600px] overflow-hidden rounded-lg border-2 border-gray-600 shadow-xl bg-white">
-      <!-- Contenedor de las imágenes -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6">
       <div
-        class="flex transition-transform duration-500 ease-in-out"
-        :style="carouselStyle"
-        style="width: 800%" <!-- Este sigue siendo el 100% por cada imagen, ajustaremos los valores de la pantalla -->
-      
-        <!-- Cada imagen ocupa 1/8 del total (12.5%), pero se ajusta a la pantalla de manera responsiva -->
-        <img src="/public/mercedes1.jpg" class="flex-shrink-0 w-[13.5%] sm:w-[12.5%] md:w-[12.5%] h-full object-cover" />
-        <img src="/public/mercedes2.jpg" class="flex-shrink-0 w-[13.5%] sm:w-[12.5%] md:w-[12.5%] h-full object-cover" />
-        <img src="/public/mercedes3.jpg" class="flex-shrink-0 w-[13.5%] sm:w-[12.5%] md:w-[12.5%] h-full object-cover" />
-        <img src="/public/mercedes4.jpg" class="flex-shrink-0 w-[13.5%] sm:w-[12.5%] md:w-[12.5%] h-full object-cover" />
-        <img src="/public/mercedes5.jpg" class="flex-shrink-0 w-[13.5%] sm:w-[12.5%] md:w-[12.5%] h-full object-cover" />
-        <img src="/public/mercedes6.jpg" class="flex-shrink-0 w-[13.5%] sm:w-[12.5%] md:w-[12.5%] h-full object-cover" />
-        <img src="/public/mercedes7.jpg" class="flex-shrink-0 w-[13.5%] sm:w-[12.5%] md:w-[12.5%] h-full object-cover" />
-        <img src="/public/mercedes8.jpg" class="flex-shrink-0 w-[13.5%] sm:w-[12.5%] md:w-[12.5%] h-full object-cover" />
+        v-for="(car, index) in cars"
+        :key="index"
+        class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+      >
+        <img
+          :src="car.img"
+          :alt="car.modelo"
+          class="w-full h-56 sm:h-64 md:h-72 lg:h-80 object-cover transition-transform duration-300 hover:scale-105"
+        />
+        <div class="p-4 text-center">
+          <h3 class="text-lg md:text-xl font-semibold text-gray-800">{{ car.modelo }}</h3>
+        </div>
       </div>
-
-      <!-- Botón izquierdo -->
-      <button
-        @click="moveLeft"
-        class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full z-10 hover:bg-opacity-70 focus:outline-none md:left-6"
-      >
-        &#10094;
-      </button>
-
-      <!-- Botón derecho -->
-      <button
-        @click="moveRight"
-        class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full z-10 hover:bg-opacity-70 focus:outline-none md:right-6"
-      >
-        &#10095;
-      </button>
     </div>
   </div>
 
   <Footer />
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      currentIndex: 0,
-      imageCount: 8,
-    };
+<script setup>
+const cars = [
+  {
+    img: "/teslaNegroCarrusel.jpg",
+    modelo: "Tesla Model S Negro"
   },
-  computed: {
-    carouselStyle() {
-      return {
-        transform: `translateX(-${this.currentIndex * (100 / this.imageCount)}%)`,
-      };
-    },
+  {
+    img: "/tesla2Carrusel.jpg",
+    modelo: "Tesla Model 3 Negro"
   },
-  methods: {
-    moveRight() {
-      this.currentIndex = (this.currentIndex + 1) % this.imageCount;
-    },
-    moveLeft() {
-      this.currentIndex =
-        (this.currentIndex - 1 + this.imageCount) % this.imageCount;
-    },
+  {
+    img: "/mercedesCarrusel.png",
+    modelo: "Mercedes-Benz Clase C"
   },
-};
+  {
+    img: "/MinbanCarrusel.jpg",
+    modelo: "Minivan Familiar"
+  },
+  {
+    img: "/cocheNegroCarrusel.jpg",
+    modelo: "Coche Negro Deportivo"
+  }
+]
 </script>
-

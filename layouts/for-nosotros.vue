@@ -32,12 +32,12 @@
     </div>
   </transition>
 
-  <!-- Contenido principal -->
+  
   <main class="bg-gray-200 py-40 px-6">
     <div class="colorsubGlobal">
-      <!-- Cambios en el layout para el texto y las imágenes -->
+    
       <div class="description2 mb-12 flex flex-col md:flex-row justify-between items-center">
-        <!-- El texto se muestra encima de las imágenes en pantallas pequeñas, y al lado en pantallas grandes -->
+       
         <div class="text2 mb-6 md:mb-0 md:w-2/3">
           <h2 class="text-3xl font-semibold mb-4">Especialistas en Transfer Málaga</h2>
           <p class="text-lg text-gray-700">
@@ -52,7 +52,7 @@
           </p>
         </div>
 
-        <!-- Las imágenes estarán debajo del texto en pantallas pequeñas y al lado en pantallas grandes -->
+        
         <div class="boxImg flex flex-col md:flex-row justify-center space-x-4">
           <img src="/public/mercedesCasa.jpg" class="w-full md:w-1/2 rounded-lg mb-4 md:mb-0" />
           <img src="/public/mercedesDentro.jpg" class="w-full md:w-1/2 rounded-lg" />
@@ -61,63 +61,12 @@
     </div>
   </main>
 
-  <!-- Tabla de precios -->
+  
   <div class="flex flex-col justify-center items-center py-8 bg-gray-200">
     <h1 class="titulito text-2xl font-bold mb-6">Tabla de precios</h1>
-
-    <!-- Contenedor para la tabla -->
-    <div class="flex justify-center items-center w-full px-4">
-      <div class="overflow-x-auto w-full max-w-4xl">
-        <table class="tabla-precios border-collapse w-full text-center mx-auto">
-          <thead>
-            <tr>
-              <th class="border border-black px-4 py-2">Destino</th>
-              <th class="border border-black px-4 py-2">Precio Ida</th>
-              <th class="border border-black px-4 py-2">Precio Vuelta</th>
-              <th class="border border-black px-4 py-2">Precio Total</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="border border-black px-4 py-2">Sevilla</td>
-              <td class="border border-black px-4 py-2">€40</td>
-              <td class="border border-black px-4 py-2">€40</td>
-              <td class="border border-black px-4 py-2">€80</td>
-            </tr>
-            <tr>
-              <td class="border border-black px-4 py-2">Córdoba</td>
-              <td class="border border-black px-4 py-2">€35</td>
-              <td class="border border-black px-4 py-2">€35</td>
-              <td class="border border-black px-4 py-2">€70</td>
-            </tr>
-            <tr>
-              <td class="border border-black px-4 py-2">Granada</td>
-              <td class="border border-black px-4 py-2">€45</td>
-              <td class="border border-black px-4 py-2">€45</td>
-              <td class="border border-black px-4 py-2">€90</td>
-            </tr>
-            <tr>
-              <td class="border border-black px-4 py-2">Malaga</td>
-              <td class="border border-black px-4 py-2">€50</td>
-              <td class="border border-black px-4 py-2">€50</td>
-              <td class="border border-black px-4 py-2">€100</td>
-            </tr>
-            <tr>
-              <td class="border border-black px-4 py-2">Jaén</td>
-              <td class="border border-black px-4 py-2">€30</td>
-              <td class="border border-black px-4 py-2">€30</td>
-              <td class="border border-black px-4 py-2">€60</td>
-            </tr>
-            <tr>
-              <td class="border border-black px-4 py-2">Almería</td>
-              <td class="border border-black px-4 py-2">€55</td>
-              <td class="border border-black px-4 py-2">€55</td>
-              <td class="border border-black px-4 py-2">€110</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+    <p>Estamos en construccion de la tabla de precios, mientras tanto contactar con nosotros, por los medios proporcionados por la web para daros un precio final</p>
+    <img src="/public/obra.gif" alt="Descripción del gif" class="w-48 h-auto rounded-lg" />
+    
   </div>
 
   <Footer />
