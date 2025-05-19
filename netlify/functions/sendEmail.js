@@ -19,11 +19,13 @@ exports.handler = async function (event, context) {
   });
 
   const mailOptions = {
-    from: `"${nombre}" <${email}>`,
-    to: 'malagatransfercouk@gmail.com', // <- correo donde recibirás el mensaje
-    subject: 'Nuevo mensaje desde el formulario',
-    text: `Teléfono: ${telefono}\n\nMensaje: ${mensaje}`,
-  };
+  from: '"Malaga Transfer" <malagatransfercouk.com>',  // tu correo real
+  to: 'malagatransfercouk@gmail.com',
+  replyTo: email,  // email del usuario que rellenó el formulario
+  subject: 'Nuevo mensaje desde el formulario',
+  text: `Nombre: ${nombre}\nEmail: ${email}\nTeléfono: ${telefono}\n\nMensaje:\n${mensaje}`,
+};
+
 
   try {
     await transporter.sendMail(mailOptions);
