@@ -1,8 +1,8 @@
-import { copyFileSync } from 'fs'
+import { copyFileSync } from 'fs';
 
 try {
-  copyFileSync('public/_redirects', '.output/public/_redirects') // Si usas SSR o preset `static`, usa esta ruta
-  console.log('✅ _redirects copiado correctamente')
+  copyFileSync('public/_redirects', '.output/public/_redirects');
+  console.log('✅ _redirects copiado correctamente a .output/public');
 } catch (error) {
-  console.error('❌ Error al copiar _redirects:', error)
+  console.error('❌ Error al copiar _redirects:', error);
 }
