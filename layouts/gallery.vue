@@ -3,9 +3,6 @@
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-40">
     <h2 class="text-3xl font-bold text-center mb-6 sm:mb-10">Galería de Vehículos</h2>
-    <p class="text-center text-gray-600 mb-12 text-base sm:text-lg">
-      Esta es una pequeña muestra de nuestra gama de vehículos. Conforme vayamos teniendo más coches, los iremos añadiendo a la web.
-    </p>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6">
       <div
@@ -40,7 +37,7 @@ const cars = [
   },
   {
     img: "/mercedesCarrusel.png",
-    modelo: "Mercedes-Benz Clase C"
+    modelo: "Mercedes-Benz Clase E"
   },
   {
     img: "/MinbanCarrusel.jpg",
