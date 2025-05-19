@@ -1,9 +1,9 @@
 const nodemailer = require('nodemailer');
 
 exports.handler = async function (event, context) {
-  const { name, email, message } = JSON.parse(event.body || '{}');
+  const { nombre, telefono, email, mensaje } = JSON.parse(event.body || '{}');
 
-  if (!name || !email || !message) {
+  if (!nombre || !telefono || !email || !mensaje) {
     return {
       statusCode: 400,
       body: JSON.stringify({ error: 'Missing required fields' }),
@@ -19,10 +19,10 @@ exports.handler = async function (event, context) {
   });
 
   const mailOptions = {
-    from: `"${name}" <${email}>`,
+    from: `"${nombre}" <${email}>`,
     to: 'malagatransfercouk@gmail.com', // <- correo donde recibirás el mensaje
     subject: 'Nuevo mensaje desde el formulario',
-    text: message,
+    text: `Teléfono: ${telefono}\n\nMensaje: ${mensaje}`,
   };
 
   try {
