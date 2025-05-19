@@ -68,11 +68,35 @@ const formularioValido = computed(() =>
 );
 
 // Función para enviar los datos al backend
-const response = await fetch('/.netlify/functions/sendEmail', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({ nombre, telefono, email, mensaje }),
-});
+const enviarFormulario = async () => {
+  try {
+    const response = await fetch('/.netlify/functions/sendEmail', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        nombre: nombre.value,
+        telefono: telefono.value,
+        email: email.value,
+        mensaje: mensaje.value
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error('Error al enviar el formulario');
+    }
+
+    // Opcional: limpiar campos o mostrar mensaje de éxito
+    nombre.value = '';
+    telefono.value = '';
+    email.value = '';
+    mensaje.value = '';
+    alert('Formulario enviado con éxito');
+  } catch (error) {
+    console.error('Error al enviar formulario:', error);
+    alert('Ocurrió un error al enviar el formulario.');
+  }
+};
+
 
 </script>
 
