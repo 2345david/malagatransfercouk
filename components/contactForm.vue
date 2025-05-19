@@ -68,37 +68,12 @@ const formularioValido = computed(() =>
 );
 
 // Función para enviar los datos al backend
-const enviarFormulario = async () => {
-  if (formularioValido.value) {
-    try {
-      const response = await fetch('http://localhost:3001/enviarmail', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          nombre: nombre.value,
-          telefono: telefono.value,
-          email: email.value,
-          mensaje: mensaje.value,
-        }),
-      });
+const response = await fetch('/.netlify/functions/sendEmail', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ nombre, telefono, email, mensaje }),
+});
 
-      const data = await response.json();
-      if (data.success) {
-        alert('Reserva enviada con éxito 🎉');
-        // Limpiar los campos después de enviar
-        nombre.value = '';
-        telefono.value = '';
-        email.value = '';
-        mensaje.value = '';
-      } else {
-        alert('Error al enviar el formulario ❌');
-      }
-    } catch (error) {
-      alert('Hubo un problema al conectar con el servidor ❌');
-      console.error('Error:', error);
-    }
-  }
-};
 </script>
 
 <style scoped>

@@ -6,8 +6,8 @@
       <h1 class="text-3xl md:text-4xl font-bold">Formulario</h1>
   
       <p class="text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-        Este es formulario el cual, puedes contactar con nosotros para cualquier consulta o duda.<br />
-        Tenéis otras alternativas, pero esta es otra.
+        Estimado cliente rellene todos los campos y nos pondremos en contacto <br> con usted para darle el mejor precio del 
+        mercado en su próximo traslado.
       </p>
     </div>
   
