@@ -26,30 +26,31 @@
       ☰
     </button>
 
-    <!-- Panel lateral -->
-    <transition name="slide">
-      <div v-if="mostrarPanel" class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg p-4 flex flex-col items-center z-50">
-        <button @click="mostrarPanel = false" class="self-end text-gray-600 text-2xl">✖</button>
+    <!-- Panel lateral pequeño tipo ventanita -->
+<transition name="slide">
+  <div v-if="mostrarPanel" class="fixed top-20 right-4 w-80 max-h-[350px] bg-white shadow-xl p-6 rounded-lg flex flex-col items-center z-50">
+    <button @click="mostrarPanel = false" class="self-end text-gray-600 text-2xl">✖</button>
 
-        <div class="mt-6 space-y-4">
-          <div class="flex items-center space-x-2">
-            <img width="20px" src="/phone.svg" alt="Teléfono">
-            <p class="text-gray-700">+34 639 622 226</p>
-          </div>
-
-          <div class="flex items-center space-x-2">
-            <img width="20px" src="/email.svg" alt="Correo">
-            <p class="text-gray-700">juanramos648@gmail.com</p>
-          </div>
-
-          <div class="flex justify-center space-x-4 mt-4">
-            <a href="#" target="_blank"><img width="40px" src="/facebook.png" alt="Facebook"></a>
-            <a href="https://www.instagram.com/davurg_06/" target="_blank"><img width="35px" src="/instagram.png" alt="Instagram"></a>
-            <a href="https://wa.me/679219416" target="_blank"><img width="40px" src="/whatsapjpg.png" alt="WhatsApp"></a>
-          </div>
-        </div>
+    <div class="mt-4 space-y-4">
+      <div class="flex items-center space-x-2">
+        <img width="20px" src="/phone.svg" alt="Teléfono">
+        <p class="text-gray-700">+34 639 622 226</p>
       </div>
-    </transition>
+
+      <div class="flex items-center space-x-2">
+        <img width="20px" src="/email.svg" alt="Correo">
+        <p class="text-gray-700">malagatransfercouk.com</p>
+      </div>
+
+      <div class="flex justify-center space-x-4 mt-4">
+        <a href="#" target="_blank"><img width="40px" src="/facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/davurg_06/" target="_blank"><img width="35px" src="/instagram.png" alt="Instagram"></a>
+        <a href="https://wa.me/679219416" target="_blank"><img width="40px" src="/whatsapjpg.png" alt="WhatsApp"></a>
+      </div>
+    </div>
+  </div>
+</transition>
+
   </div>
 </template>
 
