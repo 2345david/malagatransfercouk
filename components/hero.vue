@@ -1,5 +1,5 @@
 <template>
-  <div class="relative h-screen w-full">
+  <div class="relative min-h-[500px] w-full py-80">
     <!-- Contenedor del video de fondo -->
     <div class="absolute inset-0 -z-10 w-full h-full overflow-hidden">
       <video v-if="videoCargado" autoplay loop muted playsinline class="w-full h-full object-cover">
@@ -11,51 +11,12 @@
 
     <!-- Contenido principal -->
     <div class="relative flex flex-col justify-center items-center h-full text-white px-6">
-      <div class="text-center">
+      <div class="text-center pb-10">
         <h1 class="text-4xl sm:text-5xl font-bold">Transfer Desde/Hasta el aeropuerto de Málaga</h1>
         <p class="mt-4 text-lg sm:text-xl">Último modelo de Vehículos de alta gama - ¡Reserva ahora!</p>
-
-        <!-- Formulario -->
-        <form @submit.prevent="reservar" class="bg-white p-4 rounded-lg shadow-lg mt-6 max-w-4xl w-full mx-auto text-black">
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 items-center">
-            <div class="flex items-center bg-gray-100 p-2 rounded">
-              <img width="20" src="/miniplace.png" alt="Desde" class="mr-2">
-              <select v-model="origen" class="w-full bg-transparent focus:outline-none">
-                <option value="0">Desde</option>
-                <option v-for="(lugar, index) in lugares" :key="index" :value="lugar.value">
-                  {{ lugar.label }}
-                </option>
-              </select>
-            </div>
-
-            <div class="flex items-center bg-gray-100 p-2 rounded">
-              <img width="20" src="/place.png" alt="Hasta" class="mr-2">
-              <select v-model="destino" class="w-full bg-transparent focus:outline-none">
-                <option value="0">Hasta</option>
-                <option v-for="(lugar, index) in lugares" :key="index" :value="lugar.value">
-                  {{ lugar.label }}
-                </option>
-              </select>
-            </div>
-
-            <div class="flex items-center bg-gray-100 p-2 rounded">
-              <img width="20" src="/people.png" alt="Pasajeros" class="mr-2">
-              <input v-model="pasajeros" type="number" min="1" class="w-full bg-transparent focus:outline-none" placeholder="Nº Pasajeros">
-            </div>
-
-            <div class="flex items-center bg-gray-100 p-2 rounded">
-              <img width="20" src="/car.png" alt="Tipo de Viaje" class="mr-2">
-              <select v-model="tipoViaje" class="w-full bg-transparent focus:outline-none">
-                <option value="0">Viaje de Ida</option>
-                <option value="1">Ida y Vuelta</option>
-              </select>
-            </div>
-
-            <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition w-full sm:w-auto">
-              Reservar
-            </button>
-          </div>
-        </form>
+      </div>
+      <div class="p-2 border-2 border-solid border-blue-500 rounded hover:bg-blue-500">
+        <NuxtLink to="/formulario">Contratar servicio</NuxtLink>
       </div>
     </div>
 

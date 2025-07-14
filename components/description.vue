@@ -9,7 +9,7 @@
           Transporte desde/hasta el Aeropuerto de Málaga
         </h2>
         <p class="text-gray-700 mb-4">
-          Bienvenidos a <strong>Prestigue Málaga Transfer</strong>. Somos una empresa de transporte especializada en 
+          Bienvenidos a <strong>Malagatransfercouk</strong>. Somos una empresa de transporte especializada en 
           <strong>Transfer</strong> y transporte de personas. Tenemos amplia experiencia en el sector turístico, lo que 
           nos permite mejorar nuestro servicio día a día para satisfacer a nuestros clientes.
         </p>
@@ -36,8 +36,6 @@
         <div class="todoIncluido">
           <h1 class="text-3xl font-bold mb-4">Precio Todo Incluido</h1>
           <span>Ofrecemos un <strong>amplio servicio</strong>, como por ejemplo los lugares más famosos de Andalucía: Málaga, Marbella, Puerto Banús, Ronda, Jerez, Córdoba, Granada, Sevilla ...</span>
-          <br />
-          <span>Todos nuestros servicios cuentan con un <strong>precio todo incluido</strong>: Peajes, agua, wifi, etc...</span>
         </div>
       </div>
 
@@ -84,7 +82,7 @@
       <p class="text-lg text-white mb-8">Te ofrecemos las mejores ventajas</p>
 
       <!-- Servicios/Preferencias -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8">
         <div class="service-item p-6 bg-gray-100 rounded-lg shadow-lg">
           <img class="w-16 h-16 mx-auto mb-4" src="/public/money.png" alt="Precios todo incluido" />
           <h3 class="text-xl font-bold mb-3">Precios todo incluido</h3>
@@ -96,11 +94,6 @@
           <p class="text-gray-700">Nuestros conductores hablan varios idiomas para tu comodidad.</p>
         </div>
         <div class="service-item p-6 bg-gray-100 rounded-lg shadow-lg">
-          <img class="w-16 h-16 mx-auto mb-4" src="/public/wifi.png" alt="Wifi" />
-          <h3 class="text-xl font-bold mb-3">Wifi</h3>
-          <p class="text-gray-700">Disfruta de Wifi gratis durante el trayecto.</p>
-        </div>
-        <div class="service-item p-6 bg-gray-100 rounded-lg shadow-lg">
           <img class="w-16 h-16 mx-auto mb-4" src="/public/suit.png" alt="Servicios VIP" />
           <h3 class="text-xl font-bold mb-3">Servicios VIP</h3>
           <p class="text-gray-700">Te ofrecemos un servicio de alta gama y atención personalizada.</p>
@@ -109,11 +102,6 @@
           <img class="w-16 h-16 mx-auto mb-4" src="/public/caricon.png" alt="Limpieza de coche" />
           <h3 class="text-xl font-bold mb-3">Limpieza de coche</h3>
           <p class="text-gray-700">Cada servicio incluye la limpieza del vehículo.</p>
-        </div>
-        <div class="service-item p-6 bg-gray-100 rounded-lg shadow-lg">
-          <img class="w-16 h-16 mx-auto mb-4" src="/public/water.png" alt="Botella de agua" />
-          <h3 class="text-xl font-bold mb-3">Botella de agua</h3>
-          <p class="text-gray-700">Te ofrecemos una botella de agua durante el viaje.</p>
         </div>
       </div>
     </div>
